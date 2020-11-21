@@ -85,6 +85,7 @@ if __name__ == "__main__":
 	#opcode = b'\xCC\x37\x13\x92\xA3\x37\x13\x2A\xA3\x43\x37\x13\x76\x0C\xAB\x68\xE7\x27\x37\x13\x80\xBB\x27\x27\x27\x37\x13\xE8\x08\x27\x37\x13'
 	bytecode=b""
 	with open('C:\\Users\\ilovecookies\\Desktop\\binary.exe', 'rb') as f:
+		# the offset + size can be easily found wit objdump by printing the headers
 		f.seek(0x4800)
 		bytecode = f.read(0xc087-0x8000)
 
